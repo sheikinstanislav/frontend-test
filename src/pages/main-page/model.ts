@@ -22,6 +22,12 @@ interface ClientEvents {
 
 export type SocketType = Socket<ServerEvents, ClientEvents>
 
+// розділяємо на еффект на рівні shared/api.ts
+sample({
+  clock: service.connectOpponent, // userId,
+  target: playerModel.opponentConnected,
+})
+
 export function useSocket(userName: string) {
   const socketRef = useRef<SocketType>()
 
