@@ -7,10 +7,12 @@ import { ElementType } from '~/shared/types'
 import { $gameStatus, $roundResult, gameStarted } from '../model'
 import { Button, ElementsWrapper, Text, Wrapper } from './styles'
 
+// move to src/features/choose-element/model
 interface Props {
   sendChoice: (el: ElementType) => void
 }
 
+// remove props drilling and get sendChoice from feature/choose-element/model instead
 export const GameField: FC<Props> = ({ sendChoice }) => {
   const gameStatus = useStore($gameStatus)
   const roundResult = useStore($roundResult)

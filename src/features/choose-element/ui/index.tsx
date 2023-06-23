@@ -5,6 +5,8 @@ import { ElementType } from '~/shared/types'
 import { $choosedElement } from '../model'
 import { ElementButton, ElementWrapper, Heading } from './styles'
 
+
+// 
 interface Props {
   handleElementChoice: (el: ElementType) => void
 }

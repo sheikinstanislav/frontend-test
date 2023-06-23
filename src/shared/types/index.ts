@@ -1,3 +1,5 @@
+
+// move all types to entity levers (player, game, etc)
 export type ElementType = 'rock' | 'paper' | 'scissors'
 export type ResultType = 'tie' | 'win' | 'loss'
 export type StatusType = 'in game' | 'not in game' | 'made choice'

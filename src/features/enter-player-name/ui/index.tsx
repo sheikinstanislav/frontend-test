@@ -1,10 +1,13 @@
 import { FC, FormEvent, useState } from 'react'
+
 import { playerModel } from '~/entities/player'
+
 import { Button, From, Input, Text } from './styles'
 
 export const EnterPlayerName: FC = () => {
   const [userName, setUserName] = useState('')
 
+  // забрати логіку зміни імені гравця з моделі entity/player, перенести в enter-player-name/model
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     playerModel.nameChanged(userName)

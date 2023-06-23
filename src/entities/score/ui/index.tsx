@@ -1,19 +1,18 @@
 import { FC } from 'react'
 import { Line, Points, Wrapper } from './styles'
 
+// ATTENTION: don't move this to entity/score, because it's UI type
 type Props = {
-  score: {
-    currentPlayerPoints: number
-    opponentPlayerPoints: number
-  }
+  currentPlayerPoints: number
+  opponentPlayerPoints: number
 }
 
-export const Score: FC<Props> = ({ score }) => {
+export const Score: FC<Props> = ({ currentPlayerPoints, opponentPlayerPoints }) => {
   return (
     <Wrapper>
-      <Points>{score.currentPlayerPoints}</Points>
+      <Points>{currentPlayerPoints}</Points>
       <Line>-</Line>
-      <Points>{score.opponentPlayerPoints}</Points>
+      <Points>{opponentPlayerPoints}</Points>
     </Wrapper>
   )
 }

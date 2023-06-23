@@ -15,6 +15,7 @@ export const defineRoundResult = (
   )?.choice
   const opponentChoice = results.find(({ username }) => username !== currentUser)?.choice
   if (currentPlayerChoice === opponentChoice) return 'tie'
+  
   if (
     (currentPlayerChoice === 'paper' && opponentChoice === 'rock') ||
     (currentPlayerChoice === 'rock' && opponentChoice === 'scissors') ||
